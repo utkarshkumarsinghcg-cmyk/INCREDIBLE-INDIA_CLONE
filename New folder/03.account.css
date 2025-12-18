@@ -1,0 +1,282 @@
+/* Global Styles
+  Based on your clay.css and the new page font
+*/
+body,
+html {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Heading nav bar */
+.heading {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  /* z-index: 1; */
+  /* border: 1px solid white; */
+  background-color: #000;
+  align-items: center;
+  height: 5vw;
+  padding-left: 3.5vw;
+  padding-right: 3.5vw;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  div>img:first-child {
+    height: 2.7vw;
+    /* border: 1px solid wheat; */
+  }
+
+  .center-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 35vw;
+
+    p,
+    a {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      height: auto;
+      font-size: 1.1vw;
+    }
+
+    p svg,
+    a svg {
+      width: 1vw !important;
+      height: auto;
+    }
+
+  }
+
+  .plantrip {
+    color: white;
+    text-decoration: none;
+  }
+
+  .plantrip:hover {
+    color: red;
+
+    svg path {
+      fill: red;
+      stroke: red;
+    }
+  }
+
+  .end-heading {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+
+    >div:first-child {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    >div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    div>img {
+      height: 1.9vw;
+    }
+
+    div h3 {
+      font-size: 1.3vw;
+    }
+
+    div h3>svg {
+      width: 1vw;
+      height: auto;
+    }
+
+    div>svg {
+      width: 1.8vw;
+      height: auto;
+    }
+    
+    .account svg g{
+        color: red;
+      fill: red;
+      stroke: red;
+    }
+  }
+
+}
+
+
+.login-page {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    flex-wrap: wrap; /* Allows form to stack on mobile */
+}
+
+/* Left Column: Image */
+.login-image {
+    flex: 1;
+    min-height: 300px;
+    background-image: url('https://www.incredibleindia.gov.in/content/dam/incredible-india/images/global/subscription-desktop-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Right Column: Form */
+.login-form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.form-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.heading-nav {
+    font-size: 2.9rem;
+    font-weight: 700;
+    color: black;
+    /* background-color: transparent; */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Form Tabs */
+.form-tabs {
+    display: flex;
+    gap: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.form-tabs .tab-link {
+    text-decoration: none;
+    color: #888;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.form-tabs .tab-link.active {
+    color: red;
+    border-bottom-color: red;
+}
+
+/* Form Elements */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-bottom-color: black;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+.checkbox-group label {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Placeholder & Button */
+.captcha-placeholder {
+    padding: 10px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    width: 15vw;
+}
+
+/* Button - Based on your .sign-btn */
+.sign-btn {
+    background-color: red;
+    color: white;
+    /* text-transform: uppercase; */
+    border-radius: 40px; 
+    padding: 20px 40px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: auto;
+    width: fit-content; /* Makes button only as wide as its text */
+}
+
+.sign-btn:hover {
+    background-color: #d00000;
+}
